@@ -12,7 +12,10 @@
     "lint": "tsc --noEmit && eslint \"*/**/*.{js,ts,tsx,jsx}\" --quiet --fix",
     "format": "prettier --write .",
     "api:generate": "npx @rtk-query/codegen-openapi openapi-config.ts",
-    "api:delete": "del src\\store\\queries.ts"
+    "api:delete": "cross-env DELETE_FILE=src/store/queries.ts npm run delete-file",
+    "delete-file": "npm run delete-file:mac || npm run delete-file:win",
+    "delete-file:mac": "rm $DELETE_FILE",
+    "delete-file:win": "del %DELETE_FILE%"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
