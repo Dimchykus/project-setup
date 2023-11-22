@@ -1,8 +1,10 @@
 'use client';
 
+import { useGetPetByIdQuery } from '@/store/queries';
 import { Box, Typography } from '@mui/material';
 
 export default function Home() {
+        useGetPetByIdQuery({ petId: 1 });
   return (
     <main>
       <Box
