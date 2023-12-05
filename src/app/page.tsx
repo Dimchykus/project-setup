@@ -19,6 +19,7 @@ export default function Home() {
         <Typography variant="h1" textAlign="center">
           Hello World
         </Typography>
+        <Typography textAlign="center">Test cache</Typography>
       </Box>
     </main>
   );
