@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint \"**/*.{js,ts,tsx,jsx}\" --quiet",
+    "lint": "eslint \"**/*.{js,ts,tsx,jsx}\" --quiet --fix",
     "format": "prettier --write .",
     "api:generate": "npx @rtk-query/codegen-openapi openapi-config.ts",
     "api:delete": "del src\\store\\queries.ts"
